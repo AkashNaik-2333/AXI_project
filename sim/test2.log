@@ -1,0 +1,190 @@
+# vsim -cvgperinstance -vopt -voptargs="+acc" -coverage -sva -c -do " log -r /* ;coverage save -onexit mem_cov2;run -all; exit" -wlf wave_file2.wlf -l test2.log -sv_seed random work.top "+UVM_TESTNAME=reset_case1" 
+# Start time: 11:15:46 on Jun 30,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Sim-64
+# //  Version 2024.1_2 linux_x86_64 Mar 28 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.ahb_rst_if(fast)
+# Loading work.axi_rst_if(fast)
+# Loading work.axi_if(fast)
+# Loading work.ahb_if(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.test_pkg(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.top(fast)
+# Loading work.axi_if(fast__2)
+# Loading work.axi_rst_if(fast__2)
+# Loading work.ahb_if(fast__2)
+# Loading work.ahb_rst_if(fast__2)
+# Loading work.axi2ahb_bridge_top(fast)
+# Loading work.axi_controller(fast)
+# Loading work.axi2fifo(fast)
+# Loading work.fifo2axi(fast)
+# Loading work.fifo_wrapper(fast)
+# Loading work.id_resp_fifo(fast)
+# Loading work.resp_fifo(fast)
+# Loading work.rdata_fifo(fast)
+# Loading work.size_fifo(fast)
+# Loading work.id_send_fifo(fast)
+# Loading work.write_fifo(fast)
+# Loading work.data_fifo(fast)
+# Loading work.addr_fifo(fast)
+# Loading work.ahb_controller(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (8) for port 'arsize'. The port definition is at: ../rtl/axi2ahb_bridge_top.v(27).
+#    Time: 0 ns  Iteration: 0  Instance: /top/DUT File: ../tb/top.sv Line: 26
+# Loading /home/cad/eda/MENTORGRAPHICS/Questasim/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
+# ** Warning: (vsim-8634) Code was not compiled with coverage options.
+# Sv_Seed = 2049057236
+#  log -r /* 
+# coverage save -onexit mem_cov2
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test reset_case1...
+# I am in the build phase
+# I am in the build phase
+# I am in the build phase
+# I am in the build phase
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# ----------------------------------------------------------------
+# Name                         Type                    Size  Value
+# ----------------------------------------------------------------
+# uvm_test_top                 reset_case1             -     @491 
+#   env                        env                     -     @511 
+#     ahb_rst_agent_top        ahb_rst_agent_top       -     @548 
+#       ahb_rst_agenth[0]      ahb_rst_agent           -     @571 
+#         ahb_rst_drvh         ahb_rst_drv             -     @595 
+#           rsp_port           uvm_analysis_port       -     @610 
+#           seq_item_port      uvm_seq_item_pull_port  -     @602 
+#         ahb_rst_monh         ahb_rst_mon             -     @580 
+#           amon_port          uvm_analysis_port       -     @587 
+#         ahb_rst_seqrh        ahb_rst_seqr            -     @618 
+#           rsp_export         uvm_analysis_export     -     @625 
+#           seq_item_export    uvm_seq_item_pull_imp   -     @719 
+#           arbitration_queue  array                   0     -    
+#           lock_queue         array                   0     -    
+#           num_last_reqs      integral                32    'd1  
+#           num_last_rsps      integral                32    'd1  
+#     axi_rts_agent_toph       axi_rst_agent_top       -     @555 
+#       axi_rst_agenth[0]      axi_rst_agent           -     @745 
+#         axi_rst_drvh         axi_rst_drv             -     @769 
+#           rsp_port           uvm_analysis_port       -     @784 
+#           seq_item_port      uvm_seq_item_pull_port  -     @776 
+#         axi_rst_monh         axi_rst_mon             -     @754 
+#           xmon_port          uvm_analysis_port       -     @761 
+#         axi_rst_seqrh        axi_rst_seqr            -     @792 
+#           rsp_export         uvm_analysis_export     -     @799 
+#           seq_item_export    uvm_seq_item_pull_imp   -     @893 
+#           arbitration_queue  array                   0     -    
+#           lock_queue         array                   0     -    
+#           num_last_reqs      integral                32    'd1  
+#           num_last_rsps      integral                32    'd1  
+#     mstr_agent_toph          mstr_agent_top          -     @534 
+#       mstr_agenth[0]         mstr_agent              -     @913 
+#         mstr_drvh            mstr_drv                -     @929 
+#           rsp_port           uvm_analysis_port       -     @944 
+#           seq_item_port      uvm_seq_item_pull_port  -     @936 
+#         mstr_monh            mstr_mon                -     @922 
+#         mstr_seqrh           mstr_seqr               -     @952 
+#           rsp_export         uvm_analysis_export     -     @959 
+#           seq_item_export    uvm_seq_item_pull_imp   -     @1053
+#           arbitration_queue  array                   0     -    
+#           lock_queue         array                   0     -    
+#           num_last_reqs      integral                32    'd1  
+#           num_last_rsps      integral                32    'd1  
+#     sb                       scoreboard              -     @527 
+#     slv_agent_toph           slv_agent_top           -     @541 
+#       slv_agenth[0]          slv_agent               -     @1069
+#         slv_drvh             slv_drv                 -     @1085
+#           rsp_port           uvm_analysis_port       -     @1100
+#           seq_item_port      uvm_seq_item_pull_port  -     @1092
+#         slv_monh             slv_mon                 -     @1078
+#         slv_seqrh            slv_seqr                -     @1108
+#           rsp_export         uvm_analysis_export     -     @1115
+#           seq_item_export    uvm_seq_item_pull_imp   -     @1209
+#           arbitration_queue  array                   0     -    
+#           lock_queue         array                   0     -    
+#           num_last_reqs      integral                32    'd1  
+#           num_last_rsps      integral                32    'd1  
+# ----------------------------------------------------------------
+# 
+# inside reset axi monitor
+# inside reset axi2 monitor
+# UVM_INFO ../axi_rst_agent/axi_mon.sv(55) @ 70: uvm_test_top.env.axi_rts_agent_toph.axi_rst_agenth[0].axi_rst_monh [AXI_MON] printing from mon 
+#  -----------------------------------
+# Name       Type         Size  Value
+# -----------------------------------
+# xtn        axi_rst_xtn  -     @1229
+#   aresetn  integral     1     'd0  
+#   bvalid   integral     1     'd0  
+#   rvalid   integral     1     'd0  
+# -----------------------------------
+# 
+# inside reset axi monitor
+# UVM_INFO ../ahb_rst_agent/ahb_mon.sv(60) @ 130: uvm_test_top.env.ahb_rst_agent_top.ahb_rst_agenth[0].ahb_rst_monh [AHB_MON] printing from mon 
+#  -----------------------------------
+# Name       Type         Size  Value
+# -----------------------------------
+# axtn       ahb_rst_xtn  -     @1235
+#   hresetn  integral     1     'd0  
+#   htrans   integral     1     'd0  
+#   hready   integral     1     1    
+# -----------------------------------
+# 
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 180: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :    7
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [AHB_MON]     1
+# [AXI_MON]     1
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# ** Note: $finish    : /home/cad/eda/MENTORGRAPHICS/Questasim/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 180 ns  Iteration: 54  Instance: /top
+# Saving coverage database on exit...
+# End time: 11:15:48 on Jun 30,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 3
