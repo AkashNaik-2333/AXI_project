@@ -1,0 +1,14 @@
+# Simulation folders
+sim/
+work/
+
+# Editor temporary files
+*.swp
+*.swo
+*.swn
+
+# Logs and outputs
+*.log
+*.vcd
+*.tmp
+*.bak
